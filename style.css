@@ -29,6 +29,16 @@ body {
     overflow: hidden;
 }
 
+.overlay {
+    position: absolute; /* Position overlay on top of the image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(139, 69, 19, 0.6); /* Brown color with transparency */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
 #slider-image {
     width: 100%; /* Make the image take the full width */
     height: 100%; /* Maintain aspect ratio */
