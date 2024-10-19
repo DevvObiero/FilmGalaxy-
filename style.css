@@ -60,7 +60,7 @@ header{
     box-shadow:  0 px 5px rgba(0,0,0,0.2);
     position: relative;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 20px;
 
 }
 
@@ -73,4 +73,35 @@ header{
     padding: 2px;
     margin: 2px;
 
+}
+
+
+.movie-info{
+    color: rgb(154, 22, 48);
+    padding: 2px;
+    margin: 3px;
+    display:flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.movie-info h3{
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.more-info span.green{
+    color: green;
 }
