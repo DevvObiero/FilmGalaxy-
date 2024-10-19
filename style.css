@@ -48,7 +48,7 @@ header{
     color: #D9BB95;
 }
 
-#main{
+/* #main{
     display: flex;
     flex-wrap: wrap;
 }
@@ -57,23 +57,57 @@ header{
     width: 300px;
     margin: 1rem;
     background-color:var(--secondary-color);
-    box-shadow:  0 px 5px rgba(0,0,0,0.2);
+    box-shadow:  0px 2px 3px rgba(0,0,0,0.2);
     position: relative;
     overflow: hidden;
     border-radius: 20px;
 
+} */
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute space between the cards */
+    padding: 0 1rem; /* Add padding to balance out left and right */
 }
+
+.movie {
+    flex: 1 1 calc(25% - 2rem); /* Adjust card width to take one-fourth of the row with margins */
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+@media (max-width: 1200px) {
+    .movie {
+        flex: 1 1 calc(33.333% - 2rem); /* Three cards per row on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .movie {
+        flex: 1 1 calc(50% - 2rem); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .movie {
+        flex: 1 1 calc(100% - 2rem); /* One card per row on extra small screens */
+    }
+}
+
+
+
+
+
 
 #movie img {
     width: 100%;
 }
 
-.overview{
-    color:var(--primary-color);
-    padding: 2px;
-    margin: 2px;
-
-}
 
 
 .movie-info{
@@ -102,6 +136,32 @@ header{
     font-weight: bold;
 }
 
-.more-info span.green{
-    color: green;
+.movie-info span.green{
+    color:teal;
+}
+.movie-info span.orange{
+    color:orange;
+}
+.movie-info span.red{
+    color:var(--secondary-color2);
+
+}
+
+.overview{
+    color:var(--primary-color);
+    font-size: 1.2rem;
+    background-color: #A23A2D;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2rem;
+    max-height: 100%;
+    transform: translateY(101%);
+
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+    transition:   ease-in 0.5s;
 }
