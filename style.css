@@ -21,6 +21,51 @@ body {
   font-weight: 300;
 }
 
+/* Adjusting slider image height */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Set your desired height */
+    overflow: hidden;
+}
+
+#slider-image {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    transition: opacity 0.5s ease;
+    object-fit: cover; 
+    border-radius: 10px;
+
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-size: cover;
+}
+
+.nav-button {
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.nav-button:hover {
+    background-color:var(--secondary-color2);
+}
+
+
+
+
 header{
     padding: 1rem;
     display: flex;
@@ -164,4 +209,87 @@ header{
 .movie:hover .overview{
     transform: translateY(0);
     transition:   ease-in 0.5s;
+}
+ /* nav  */
+
+
+.navbar {
+    background-color:var(--primary-color); /* Background color for navbar */
+    padding: 0.5rem; /* Spacing around the navbar */
+    color: var(--secondary-color);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    color: var(--secondary-color); /* Logo color */
+    text-decoration: none; /* Remove underline from logo */
+    font-size: 20px; /* Logo font size */
+}
+
+.logo:hover {
+    color: var(--secondary-color2); /* Logo color */
+    text-decoration: none; /* Remove underline from logo */
+    font-size: 20px; /* Logo font size */
+}
+
+
+.nav-menu {
+    list-style: none; /* Remove bullet points from list */
+    display: flex; /* Align items horizontally */
+    color: #75543B;
+}
+
+.nav-menu li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.nav-menu a {
+    color: var(--secondary-color); /* Menu item color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Transition for hover effect */
+    font-weight: 700;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color2); /* Color change on hover */
+}
+
+/* Responsive menu toggle */
+.nav-toggle {
+    display: none; /* Hide toggle by default */
+    flex-direction: column; /* Stack bars vertically */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.bar {
+    height: 3px; /* Height of the bars */
+    width: 25px; /* Width of the bars */
+    background-color:var(--secondary-color2); /* Bar color */
+    margin: 4px; /* Space between bars */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Position below navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: #333; /* Background for dropdown */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
 }
