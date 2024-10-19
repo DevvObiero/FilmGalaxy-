@@ -48,3 +48,29 @@ header{
     color: #D9BB95;
 }
 
+#main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#movie{
+    width: 300px;
+    margin: 1rem;
+    background-color:var(--secondary-color);
+    box-shadow:  0 px 5px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+
+#movie img {
+    width: 100%;
+}
+
+.overview{
+    color:var(--primary-color);
+    padding: 2px;
+    margin: 2px;
+
+}
