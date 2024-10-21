@@ -1,7 +1,7 @@
 
 <h1>Project Name: [FilmGalaxy]</h1>
 
-<linkhttps://filmgalaxy.netlify.app/>
+https://filmgalaxy.netlify.app
 
 Description: Welcome to Film Galaxy!!🚀, a dynamic and immersive movie website designed to give users the ultimate cinematic experience! Explore a vast galaxy of films, discover trending movies, get detailed information about your favorite films, and much more.
 
