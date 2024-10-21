@@ -16,4 +16,4 @@ Movie details page with trailers, cast info, and reviews
 <h1>Tech Stack:</h1>
 
 HTML, CSS (Flexbox/Grid), JavaScript (Vanilla JS)
-APIs 
+APIs from tmdb
